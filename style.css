@@ -74,18 +74,62 @@ nav{
 .hero-content h1{ font-size:clamp(32px, 4.2vw, 48px); line-height:1.15; margin:16px 0 20px; font-weight:500; }
 .hero-content h1 .highlight{ font-style:italic; color:var(--gold-bright); }
 .hero-content p.sub{ font-size:16.5px; line-height:1.6; color:rgba(237,230,214,0.85); margin-bottom:28px; font-weight:400; }
-.hero-photo-wrap{ position:relative; }
-.hero-photo{
-  width:100%; height:auto; object-fit:cover; border-radius:12px; display:block; border:1px solid var(--line);
+
+/* HERO PHOTO & CAPTION (3 ADVOGADOS) */
+.hero-photo-wrap {
+  position: relative;
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+}
+.hero-photo {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  display: block;
+  border: 1px solid var(--line);
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
-.hero-photo-caption{
-  position:absolute; bottom:16px; left:16px; right:16px;
-  background: rgba(26,22,18,0.92); backdrop-filter:blur(8px);
-  padding:12px 16px; border-radius:8px; border:1px solid var(--line);
+.hero-photo-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: rgba(26, 22, 18, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
 }
-.hero-photo-caption .names{ font-size:14px; font-weight:600; color:var(--cream); }
-.hero-photo-caption .oab{ font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--gold); margin-top:2px; }
+.hero-photo-caption .names-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hero-photo-caption .lawyer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(201, 162, 75, 0.15);
+  padding-bottom: 6px;
+}
+.hero-photo-caption .lawyer-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.hero-photo-caption .name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--cream);
+}
+.hero-photo-caption .oab {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.5px;
+  color: var(--gold);
+}
 
 /* Simple hero (no photo, used on subpages) */
 .hero-inner{ max-width:800px; margin:0 auto; text-align:center; }
@@ -103,7 +147,7 @@ nav{
 .btn-primary:hover{ background:var(--gold-bright); transform:translateY(-2px); box-shadow: 0 6px 20px rgba(201,162,75,0.3); }
 .btn-primary:focus-visible{ outline:3px solid var(--gold-bright); outline-offset:3px; }
 
-/* SOCIAL PROOF BAR */
+/* SOCIAL PROOF BAR (home only) */
 .social-proof{ background:var(--card); border-bottom:1px solid var(--line); padding:24px 24px; }
 .proof-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:center; }
 .proof-item .number{ font-family:'Cormorant Garamond', serif; font-size:24px; font-weight:600; color:var(--gold-bright); }
@@ -118,6 +162,7 @@ nav{
   display:grid; grid-template-columns: 20px 1fr; align-items:baseline; font-size:15.5px; line-height:1.6; color:rgba(237,230,214,0.9);
 }
 .qualify li::before{ content:"•"; color:var(--gold); font-size:20px; line-height:1; }
+.qualify .note{ margin-top:28px; font-size:14.5px; color:rgba(237,230,214,0.6); line-height:1.5; }
 
 /* AREAS */
 .areas{ padding:80px 24px; border-bottom:1px solid var(--line); }
@@ -125,8 +170,17 @@ nav{
 .areas-head h2{ font-size:clamp(28px,3.4vw,38px); font-weight:500; margin-top:10px; }
 .section-divider{ display:flex; align-items:center; gap:14px; margin-bottom:20px; flex-wrap:wrap; }
 .section-divider h3{ font-size:22px; color:var(--cream); font-weight:500; }
+.areas-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:18px; }
+.area-card{
+  background:var(--card); border:1px solid var(--line); border-radius:10px; padding:24px 20px;
+  transition:all 0.25s ease; text-decoration:none; display:block;
+}
+.area-card:hover{ border-color:var(--gold); transform:translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.area-card h3{ font-size:20px; font-weight:600; color:var(--gold-bright); margin-bottom:8px; }
+.area-card p{ font-size:14px; line-height:1.55; color:rgba(237,230,214,0.78); margin:0; }
+.area-card .link-text{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--gold); margin-top:14px; display:inline-block; }
 
-/* HUBS DE DECISÃO (PESSOA FÍSICA VS EMPRESA) */
+/* HUBS DE DECISÃO */
 .decision-header {
   text-align: center;
   max-width: 680px;
@@ -307,10 +361,12 @@ footer .foot-links a:hover{ color:var(--gold-bright); }
 
 @media (max-width: 860px){
   .hero-grid{ grid-template-columns:1fr; }
+  .hero-photo { height: 380px; }
   .proof-grid{ grid-template-columns:repeat(2,1fr); gap:16px; }
   .nav-links{ display:none; }
   .decision-grid{ grid-template-columns:1fr; gap:24px; }
   .decision-card{ padding:32px 24px; }
+  .areas-grid{ grid-template-columns:1fr; }
   .steps{ grid-template-columns:1fr; }
   .team-inner{ grid-template-columns:1fr; }
   .team-photo{ max-width:340px; margin:0 auto; }
@@ -318,23 +374,22 @@ footer .foot-links a:hover{ color:var(--gold-bright); }
 }
 
 /* ==========================================================================
-   EFEITO SCROLL REVEAL (ANIMAÇÕES SUAVES DE ENTRADA)
+   EFEITO SCROLL REVEAL & FALLBACK VISIBILIDADE
    ========================================================================== */
 
-/* Estado inicial (oculto e levemente deslocado para baixo) */
-/* Garante que o conteúdo apareça se o JS falhar ou demorar */
 .reveal {
-  opacity: 1 !important;
-  transform: none !important;
+  opacity: 1; /* Fallback de segurança para garantir visibilidade */
+  transform: none;
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
-/* Estado final quando entra na viewport */
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Delays escalonados para elementos irmãos */
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
@@ -342,7 +397,6 @@ footer .foot-links a:hover{ color:var(--gold-bright); }
 .reveal-delay-5 { transition-delay: 0.5s; }
 .reveal-delay-6 { transition-delay: 0.6s; }
 
-/* Respeito à preferência do usuário por movimento reduzido */
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1 !important;
