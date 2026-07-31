@@ -103,7 +103,7 @@ nav{
 .btn-primary:hover{ background:var(--gold-bright); transform:translateY(-2px); box-shadow: 0 6px 20px rgba(201,162,75,0.3); }
 .btn-primary:focus-visible{ outline:3px solid var(--gold-bright); outline-offset:3px; }
 
-/* SOCIAL PROOF BAR (home only) */
+/* SOCIAL PROOF BAR */
 .social-proof{ background:var(--card); border-bottom:1px solid var(--line); padding:24px 24px; }
 .proof-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:center; }
 .proof-item .number{ font-family:'Cormorant Garamond', serif; font-size:24px; font-weight:600; color:var(--gold-bright); }
@@ -118,7 +118,6 @@ nav{
   display:grid; grid-template-columns: 20px 1fr; align-items:baseline; font-size:15.5px; line-height:1.6; color:rgba(237,230,214,0.9);
 }
 .qualify li::before{ content:"•"; color:var(--gold); font-size:20px; line-height:1; }
-.qualify .note{ margin-top:28px; font-size:14.5px; color:rgba(237,230,214,0.6); line-height:1.5; }
 
 /* AREAS */
 .areas{ padding:80px 24px; border-bottom:1px solid var(--line); }
@@ -126,15 +125,121 @@ nav{
 .areas-head h2{ font-size:clamp(28px,3.4vw,38px); font-weight:500; margin-top:10px; }
 .section-divider{ display:flex; align-items:center; gap:14px; margin-bottom:20px; flex-wrap:wrap; }
 .section-divider h3{ font-size:22px; color:var(--cream); font-weight:500; }
-.areas-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:18px; }
-.area-card{
-  background:var(--card); border:1px solid var(--line); border-radius:10px; padding:24px 20px;
-  transition:all 0.25s ease; text-decoration:none; display:block;
+
+/* HUBS DE DECISÃO (PESSOA FÍSICA VS EMPRESA) */
+.decision-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 56px auto;
 }
-.area-card:hover{ border-color:var(--gold); transform:translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
-.area-card h3{ font-size:20px; font-weight:600; color:var(--gold-bright); margin-bottom:8px; }
-.area-card p{ font-size:14px; line-height:1.55; color:rgba(237,230,214,0.78); margin:0; }
-.area-card .link-text{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--gold); margin-top:14px; display:inline-block; }
+.decision-header h2 {
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 500;
+  margin: 12px 0 16px 0;
+  color: var(--cream);
+}
+.decision-sub {
+  font-size: 16px;
+  color: rgba(237, 230, 214, 0.75);
+  line-height: 1.6;
+}
+.decision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 20px;
+}
+.decision-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.decision-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(201, 162, 75, 0.15);
+  background: #252019;
+}
+.decision-card-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  background: rgba(201, 162, 75, 0.1);
+  border: 1px solid var(--line);
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 24px;
+}
+.corp-badge {
+  color: var(--gold-bright);
+  border-color: rgba(228, 200, 120, 0.3);
+  background: rgba(228, 200, 120, 0.08);
+}
+.decision-icon {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.decision-card h3 {
+  font-size: 28px;
+  color: var(--cream);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.decision-card p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(237, 230, 214, 0.75);
+  margin-bottom: 28px;
+}
+.decision-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px 0;
+  display: grid;
+  gap: 12px;
+}
+.decision-list li {
+  font-size: 14px;
+  color: rgba(237, 230, 214, 0.9);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.decision-list li span {
+  color: var(--gold);
+  font-weight: bold;
+}
+.btn-decision {
+  display: block;
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--gold);
+  color: var(--bg);
+  padding: 16px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.decision-card:hover .btn-decision {
+  background: var(--gold-bright);
+  transform: translateX(4px);
+  box-shadow: 0 4px 15px rgba(201, 162, 75, 0.3);
+}
 
 /* TEAM (subpages) */
 .team{ padding:80px 24px; border-bottom:1px solid var(--line); background:var(--bg-soft); }
@@ -204,9 +309,46 @@ footer .foot-links a:hover{ color:var(--gold-bright); }
   .hero-grid{ grid-template-columns:1fr; }
   .proof-grid{ grid-template-columns:repeat(2,1fr); gap:16px; }
   .nav-links{ display:none; }
-  .areas-grid{ grid-template-columns:1fr; }
+  .decision-grid{ grid-template-columns:1fr; gap:24px; }
+  .decision-card{ padding:32px 24px; }
   .steps{ grid-template-columns:1fr; }
   .team-inner{ grid-template-columns:1fr; }
   .team-photo{ max-width:340px; margin:0 auto; }
   .team-grid{ grid-template-columns:1fr; }
+}
+
+/* ==========================================================================
+   EFEITO SCROLL REVEAL (ANIMAÇÕES SUAVES DE ENTRADA)
+   ========================================================================== */
+
+/* Estado inicial (oculto e levemente deslocado para baixo) */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Estado final quando entra na viewport */
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delays escalonados para elementos irmãos */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+/* Respeito à preferência do usuário por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
