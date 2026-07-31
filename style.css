@@ -71,7 +71,7 @@ nav{
 /* BREADCRUMB */
 .breadcrumb{
   max-width: 1080px;
-  margin: 40px auto 12px auto;
+  margin: 32px auto 12px auto;
   padding: 0 24px;
   text-align: left;
   font-family: 'IBM Plex Mono', monospace;
@@ -222,10 +222,15 @@ footer .foot-links a:hover{ color:var(--gold-bright); }
 }
 
 /* ==========================================================================
-   EFEITO SCROLL REVEAL
+   EFEITO SCROLL REVEAL (CORRIGIDO: visível por padrão se não houver JS)
    ========================================================================== */
 
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+html.js .reveal {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
@@ -233,22 +238,7 @@ footer .foot-links a:hover{ color:var(--gold-bright); }
   will-change: opacity, transform;
 }
 
-.reveal.is-visible {
+html.js .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
-.reveal-delay-5 { transition-delay: 0.5s; }
-.reveal-delay-6 { transition-delay: 0.6s; }
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
 }
