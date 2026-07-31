@@ -47,7 +47,6 @@
       display:flex; gap:10px; align-items:center; flex-wrap:wrap;
     }
     
-    /* MENU TUNADO: Botões clicáveis com bordas e iluminação */
     .nav-links a{
       color: rgba(237,230,214,0.9);
       text-decoration: none;
@@ -81,16 +80,15 @@
     .hero-inner{ max-width:800px; margin:0 auto; text-align:center; }
     .hero h1{ font-size:clamp(34px, 4.8vw, 54px); line-height:1.15; margin:18px 0 24px; font-weight:500; }
     .hero h1 .highlight{ font-style:italic; color:var(--gold-bright); }
-    .hero p.sub{ font-size:17.5px; line-height:1.65; color:rgba(237,230,214,0.82); max-width:56ch; margin:0 auto; font-weight:400; }
+    .hero p.sub{ font-size:17.5px; line-height:1.65; color:rgba(237,230,214,0.85); max-width:56ch; margin:0 auto; font-weight:400; }
     .hero-cta-row{ margin-top:36px; display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
     .btn-primary{
       font-family:'IBM Plex Mono', monospace; font-size:12.5px; text-transform:uppercase; letter-spacing:0.08em;
       background:var(--gold); color:var(--bg); border:none; padding:16px 30px; border-radius:6px;
-      cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:10px; font-weight:500;
+      cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:10px; font-weight:600;
       transition:transform 0.2s ease, background 0.2s ease;
     }
     .btn-primary:hover{ background:var(--gold-bright); transform:translateY(-2px); }
-    .btn-primary:focus-visible{ outline:3px solid var(--gold-bright); outline-offset:3px; }
 
     /* QUALIFY */
     .qualify{ padding:80px 24px; border-bottom:1px solid var(--line); background:var(--bg-soft); }
@@ -101,7 +99,7 @@
       display:grid; grid-template-columns: 20px 1fr; align-items:first baseline; font-size:16px; line-height:1.6; color:rgba(237,230,214,0.9);
     }
     .qualify li::before{ content:"•"; color:var(--gold); font-size:20px; line-height:1; }
-    .qualify .note{ margin-top:32px; font-size:14.5px; color:rgba(237,230,214,0.6); line-height:1.5; }
+    .qualify .note{ margin-top:32px; font-size:14.5px; color:rgba(237,230,214,0.65); line-height:1.5; }
 
     /* AREAS */
     .areas{ padding:88px 24px; border-bottom:1px solid var(--line); }
@@ -114,7 +112,7 @@
     }
     .area-card:hover{ border-color:rgba(201,162,75,0.45); transform:translateY(-3px); }
     .area-card h3{ font-size:21px; font-weight:600; color:var(--gold-bright); margin-bottom:10px; }
-    .area-card p{ font-size:14.5px; line-height:1.6; color:rgba(237,230,214,0.75); margin:0; }
+    .area-card p{ font-size:14.5px; line-height:1.6; color:rgba(237,230,214,0.78); margin:0; }
     .area-card .link-text{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--gold); margin-top:16px; display:inline-block; }
 
     /* TEAM */
@@ -127,20 +125,7 @@
     .lawyer{ margin-bottom:18px; }
     .lawyer .name{ font-size:19px; color:var(--cream); font-weight:600; font-family:'Work Sans', sans-serif; }
     .lawyer .oab{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--gold); letter-spacing:0.04em; margin-top:2px; }
-    .team-head p.desc{ font-size:15px; line-height:1.6; color:rgba(237,230,214,0.75); margin-top:20px; }
-
-    /* PAGES NAV BAND */
-    .site-map-band{ padding:64px 24px; border-bottom:1px solid var(--line); background:var(--bg); }
-    .site-map-inner{ max-width:1040px; margin:0 auto; }
-    .site-map-inner h2{ font-size:24px; margin-bottom:24px; color:var(--gold-bright); }
-    .pages-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:12px; }
-    .page-link-btn{
-      background:var(--card); border:1px solid var(--line); padding:14px 18px; border-radius:6px;
-      color:var(--cream); text-decoration:none; font-size:14px; font-weight:500; transition:all 0.2s ease;
-      display:flex; justify-content:space-between; align-items:center;
-    }
-    .page-link-btn:hover{ border-color:var(--gold); color:var(--gold-bright); background:var(--bg-soft); }
-    .page-link-btn span{ color:var(--gold); font-family:'IBM Plex Mono', monospace; }
+    .team-head p.desc{ font-size:15px; line-height:1.6; color:rgba(237,230,214,0.8); margin-top:20px; }
 
     /* HOW IT WORKS */
     .how{ padding:88px 24px; border-bottom:1px solid var(--line); }
@@ -149,7 +134,7 @@
     .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
     .step .step-label{ font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--gold); letter-spacing:0.12em; text-transform:uppercase; }
     .step h3{ font-size:20px; font-weight:600; margin:12px 0 10px; color:var(--cream); }
-    .step p{ font-size:14.5px; line-height:1.6; color:rgba(237,230,214,0.75); margin:0; }
+    .step p{ font-size:14.5px; line-height:1.6; color:rgba(237,230,214,0.78); margin:0; }
 
     /* FAQ */
     .faq{ padding:88px 24px; border-bottom:1px solid var(--line); background:var(--bg-soft); }
@@ -163,13 +148,13 @@
     summary::-webkit-details-marker{ display:none; }
     summary::after{ content:"+"; color:var(--gold); font-size:22px; flex-shrink:0; transition:transform 0.2s ease; font-weight:300; }
     details[open] summary::after{ content:"–"; }
-    details p{ font-size:15px; line-height:1.65; color:rgba(237,230,214,0.75); margin:14px 0 0; }
+    details p{ font-size:15px; line-height:1.65; color:rgba(237,230,214,0.8); margin:14px 0 0; }
 
     /* CTA BAND */
     .cta-band{ margin:64px 24px 32px; padding:72px 40px; border-radius:12px; background:var(--card); border:1px solid var(--line); text-align:center; }
     .cta-band-inner{ max-width:640px; margin:0 auto; }
     .cta-band h2{ font-size:clamp(28px,3.6vw,40px); font-weight:500; }
-    .cta-band p{ font-size:16px; line-height:1.6; margin:16px 0 32px; color:rgba(237,230,214,0.8); }
+    .cta-band p{ font-size:16px; line-height:1.6; margin:16px 0 32px; color:rgba(237,230,214,0.82); }
 
     footer{
       padding:40px 24px 56px; text-align:center;
@@ -203,25 +188,25 @@
 <section class="hero">
   <div class="hero-inner">
     <span class="eyebrow">Advocacia Especializada · São Lourenço e Região</span>
-    <h1>Análise técnica e orientação estratégica para <span class="highlight">proteger seus direitos</span>.</h1>
-    <p class="sub">Atuação jurídica focada na resolução de conflitos bancários, defesa em busca e apreensão de veículos, garantias em saúde e demandas trabalhistas e previdenciárias.</p>
+    <h1>Defesa jurídica estratégica para <span class="highlight">proteger seus direitos e o seu patrimônio</span>.</h1>
+    <p class="sub">Soluções rápidas e seguras para conflitos bancários, apreensão de veículos, negativas de planos de saúde, ações trabalhistas e benefícios do INSS.</p>
     <div class="hero-cta-row">
-      <a class="btn-primary" href="https://wa.me/5512982476745?text=Ol%C3%A1%2C%20gostaria%20de%20apresentar%20meu%20caso%20para%20an%C3%A1lise." target="_blank" rel="noopener">Iniciar atendimento no WhatsApp →</a>
+      <a class="btn-primary" href="https://wa.me/5512982476745?text=Ol%C3%A1%2C%20gostaria%20de%20apresentar%20meu%20caso%20para%20an%C3%A1lise." target="_blank" rel="noopener">Falar com um advogado no WhatsApp →</a>
     </div>
   </div>
 </section>
 
 <section class="qualify">
   <div class="qualify-inner">
-    <span class="eyebrow">Casos de Atuação Recorrente</span>
-    <h2>Situações que demandam intervenção jurídica imediata</h2>
+    <span class="eyebrow">Atuação Rápida e Focada</span>
+    <h2>Situações em que podemos te ajudar imediatamente</h2>
     <ul>
-      <li><span><strong>Ações de Busca e Apreensão de Veículos:</strong> Notificação judicial, risco de apreensão ou revisão de contratos de financiamento com indícios de abusividade.</span></li>
-      <li><span><strong>Direito Bancário e Contratual:</strong> Cobranças indevidas, fraudes em empréstimos e revisão de juros e encargos em contratos financeiros.</span></li>
-      <li><span><strong>Negativas em Saúde:</strong> Recusa de cobertura para cirurgias, exames ou medicamentos de alto custo por parte de planos de saúde ou pelo SUS.</span></li>
-      <li><span><strong>Relações de Trabalho e Previdência:</strong> Irregularidades na rescisão contratual, horas extras não quitadas, concessão ou revisão de benefícios no INSS.</span></li>
+      <li><span><strong>Busca e Apreensão de Veículos:</strong> Notificação judicial, risco de perder o veículo ou abusividades nas parcelas e juros do financiamento.</span></li>
+      <li><span><strong>Direito Bancário e Contratos:</strong> Cobranças indevidas, fraudes em empréstimos consignados e revisão de taxas bancárias abusivas.</span></li>
+      <li><span><strong>Negativas de Saúde e Medicamentos:</strong> Medidas liminares urgentes contra recusas de cirurgias, exames ou remédios pelo plano de saúde ou SUS.</span></li>
+      <li><span><strong>Direitos Trabalhistas e INSS:</strong> Acertos rescisórios incorretos, horas extras não pagas, concessão ou destravamento de benefícios previdenciários.</span></li>
     </ul>
-    <p class="note">Caso a sua dúvida envolva outra área do direito, nossa equipe fará a orientação inicial e encaminhará para o procedimento adequado.</p>
+    <p class="note">Tem outro problema jurídico? Fale com a gente. Fazemos a triagem e indicamos exatamente o melhor caminho para o seu caso.</p>
   </div>
 </section>
 
@@ -229,58 +214,39 @@
   <div class="wrap">
     <div class="areas-head">
       <span class="eyebrow">Áreas de Atuação</span>
-      <h2>Especialidades do Escritório</h2>
+      <h2>Como atuamos no seu caso</h2>
     </div>
     <div class="areas-grid">
       <a href="busca-e-apreensao.html" class="area-card">
         <h3>Busca e Apreensão & Bancário</h3>
-        <p>Defesa urgente em processos de busca de veículos, contestação de busca ilegal e renegociação judicial de dívidas bancárias.</p>
-        <span class="link-text">Saber mais →</span>
+        <p>Defesa urgente contra a apreensão do seu veículo, cancelamento de buscas ilegais e renegociação justa de dívidas com bancos.</p>
+        <span class="link-text">Ver detalhes →</span>
       </a>
       <a href="saude.html" class="area-card">
-        <h3>Direito Médico & Saúde</h3>
-        <p>Obtenção de medidas liminares para liberação imediata de tratamentos, procedimentos hospitalares e medicamentos.</p>
-        <span class="link-text">Saber mais →</span>
+        <h3>Direito à Saúde</h3>
+        <p>Ações rápidas com pedido de liminar para garantir tratamentos, internações, cirurgias e remédios de alto custo imediatamente.</p>
+        <span class="link-text">Ver detalhes →</span>
       </a>
       <a href="trabalhista.html" class="area-card">
         <h3>Direito Trabalhista</h3>
-        <p>Representação de trabalhadores na defesa de direitos rescisórios, reconhecimento de vínculo, horas extras e indenizações.</p>
-        <span class="link-text">Saber mais →</span>
+        <p>Defesa dos seus direitos no trabalho: cálculo correto de verbas rescisórias, horas extras, vínculo empregatício e indenizações.</p>
+        <span class="link-text">Ver detalhes →</span>
       </a>
       <a href="beneficio-inss.html" class="area-card">
-        <h3>Direito Previdenciário</h3>
-        <p>Encaminhamento administrativo e judicial para concessão de aposentadorias, auxílios-doença, pensões e revisões do INSS.</p>
-        <span class="link-text">Saber mais →</span>
+        <h3>INSS & Previdência</h3>
+        <p>Auxílio completo para dar entrada, destravar na justiça ou revisar aposentadorias, auxílio-doença, BPC/LOAS e pensões.</p>
+        <span class="link-text">Ver detalhes →</span>
       </a>
       <a href="sindicatos.html" class="area-card">
         <h3>Direito Sindical</h3>
-        <p>Assessoria jurídica para categorias profissionais, negociações coletivas e demandas institucionais.</p>
-        <span class="link-text">Saber mais →</span>
+        <p>Assessoria jurídica especializada para categorias profissionais, negociações de acordos coletivos e suporte institucional.</p>
+        <span class="link-text">Ver detalhes →</span>
       </a>
       <a href="condominios.html" class="area-card">
-        <h3>Direito Condominial & Consumidor</h3>
-        <p>Resolução de litígios envolvendo serviços essenciais, contratos abusivos, convenções e reparação de danos.</p>
-        <span class="link-text">Saber mais →</span>
+        <h3>Consumidor & Condomínios</h3>
+        <p>Solução para abusos de empresas de serviços, cobranças indevidas, contratos irregulares e conflitos condominiais.</p>
+        <span class="link-text">Ver detalhes →</span>
       </a>
-    </div>
-  </div>
-</section>
-
-<section class="site-map-band">
-  <div class="site-map-inner">
-    <span class="eyebrow">Acesso Rápido</span>
-    <h2>Nossos Serviços e Páginas</h2>
-    <div class="pages-grid">
-      <a href="busca-e-apreensao.html" class="page-link-btn">Busca e Apreensão <span>→</span></a>
-      <a href="beneficio-inss.html" class="page-link-btn">Benefícios INSS <span>→</span></a>
-      <a href="saude.html" class="page-link-btn">Direito à Saúde <span>→</span></a>
-      <a href="saude-opme.html" class="page-link-btn">OPME & Próteses <span>→</span></a>
-      <a href="trabalhista.html" class="page-link-btn">Direito Trabalhista <span>→</span></a>
-      <a href="sindicatos.html" class="page-link-btn">Direito Sindical <span>→</span></a>
-      <a href="condominios.html" class="page-link-btn">Condomínios <span>→</span></a>
-      <a href="equipe.html" class="page-link-btn">Nossa Equipe <span>→</span></a>
-      <a href="equipe-almeida-vaz.html" class="page-link-btn">Sobre os Sócios <span>→</span></a>
-      <a href="style.html" class="page-link-btn">Guia de Estilo <span>→</span></a>
     </div>
   </div>
 </section>
@@ -289,8 +255,8 @@
   <div class="team-inner">
     <img class="team-photo" src="equipe-almeida-vaz.jpg" alt="Dr. Bruno Antonio Vaz e Dr. Renato Almeida, sócios do Almeida & Vaz Advogados">
     <div class="team-head">
-      <span class="eyebrow">Quem conduz o seu caso</span>
-      <h2>Os advogados por trás do escritório</h2>
+      <span class="eyebrow">Atendimento Personalizado</span>
+      <h2>Quem cuidará do seu processo</h2>
       <div class="lawyer">
         <div class="name">Dr. Bruno Antonio Vaz</div>
         <div class="oab">OAB/SP 487.676</div>
@@ -299,30 +265,30 @@
         <div class="name">Dr. Renato Almeida</div>
         <div class="oab">OAB/SP 491.622</div>
       </div>
-      <p class="desc">Todo caso é acompanhado diretamente pelos sócios do escritório, da triagem inicial até o encaminhamento das medidas judiciais ou extrajudiciais.</p>
+      <p class="desc">Aqui o seu caso não é repassado para estagiários. Você fala e é atendido diretamente pelos sócios do escritório, do primeiro contato até o final do processo.</p>
     </div>
   </div>
 </section>
 
 <section class="how">
   <div class="how-inner">
-    <span class="eyebrow">Atendimento</span>
-    <h2>Etapas da consulta jurídica</h2>
+    <span class="eyebrow">Passo a Passo</span>
+    <h2>Como funciona o nosso atendimento</h2>
     <div class="steps">
       <div class="step">
-        <div class="step-label">Etapa 1</div>
-        <h3>Relato do Caso</h3>
-        <p>Envio das informações e documentos iniciais através do canal de atendimento via WhatsApp.</p>
+        <div class="step-label">Passo 1</div>
+        <h3>Conversa Inicial</h3>
+        <p>Você nos explica o que aconteceu e envia os documentos pelo WhatsApp, sem complicação.</p>
       </div>
       <div class="step">
-        <div class="step-label">Etapa 2</div>
-        <h3>Análise Documental</h3>
-        <p>Avaliamos a viabilidade jurídica, jurisprudências recentes e os caminhos legais mais adequados.</p>
+        <div class="step-label">Passo 2</div>
+        <h3>Análise do Caso</h3>
+        <p>Avaliamos os detalhes técnicos, as provas e a lei para encontrar a solução mais rápida.</p>
       </div>
       <div class="step">
-        <div class="step-label">Etapa 3</div>
-        <h3>Orientação e Conduta</h3>
-        <p>Apresentação parecerista da estratégia adotada e formalização das medidas judiciais ou extrajudiciais.</p>
+        <div class="step-label">Passo 3</div>
+        <h3>Ação e Solução</h3>
+        <p>Apresentamos a melhor estratégia jurídica para você e damos entrada nas medidas necessárias.</p>
       </div>
     </div>
   </div>
@@ -330,38 +296,38 @@
 
 <section class="faq">
   <div class="faq-inner">
-    <span class="eyebrow">Esclarecimentos</span>
-    <h2>Perguntas Frequentes</h2>
+    <span class="eyebrow">Dúvidas Frequentes</span>
+    <h2>Respostas para as principais perguntas</h2>
     <details>
-      <summary>Como funciona o primeiro contato com o escritório?</summary>
-      <p>O primeiro contato é realizado de forma direta. O cliente apresenta um resumo dos fatos e a documentação disponível para que nossa equipe faça uma triagem técnica inicial.</p>
+      <summary>Como é feito o primeiro contato com o escritório?</summary>
+      <p>É simples e direto pelo WhatsApp. Você nos envia um resumo do seu problema e os documentos que tiver. Nossa equipe faz uma avaliação preliminar para entender o seu caso.</p>
     </details>
     <details>
-      <summary>Quais documentos são necessários para a análise preliminar?</summary>
-      <p>Depende da área. Para questões contratuais ou bancárias, o contrato de financiamento ou extratos. Em casos de saúde, o relatório médico e a negativa por escrito do plano. Contudo, no primeiro contato orientamos exatamente o que será preciso.</p>
+      <summary>Quais documentos preciso enviar de início?</summary>
+      <p>Depende da sua situação. Para problemas bancários, o contrato do banco ou extratos. Para saúde, o pedido do médico e o comprovante de recusa do plano. Pelo próprio WhatsApp nós te orientamos sobre o que enviar.</p>
     </details>
     <details>
-      <summary>O escritório realiza atendimento presencial?</summary>
-      <p>Sim. Realizamos atendimentos presenciais em nosso endereço em São Lourenço/MG com agendamento prévio, além de consultas por videoconferência para clientes de outras localidades.</p>
+      <summary>O atendimento é presencial ou online?</summary>
+      <p>Atendemos presencialmente em nosso escritório em São Lourenço/MG (com agendamento prévio) e também realizamos atendimentos 100% digitais por mensagem ou vídeo para clientes de qualquer região.</p>
     </details>
     <details>
-      <summary>Qual é o prazo para a propositura de uma ação urgente?</summary>
-      <p>Casos que envolvem busca e apreensão ou risco à saúde têm prioridade máxima e as medidas liminares são elaboradas com o máximo de celeridade assim que os documentos são validados.</p>
+      <summary>Meu caso é urgente, quanto tempo demora para dar entrada?</summary>
+      <p>Casos urgentes (como risco de busca do veículo ou negativas de tratamento de saúde) recebem prioridade total. Assim que analisamos os documentos, preparamos o pedido de liminar com urgência máxima.</p>
     </details>
   </div>
 </section>
 
 <section class="cta-band">
   <div class="cta-band-inner">
-    <h2>Agende uma avaliação do seu caso</h2>
-    <p>A análise antecipada de contratos e prazos processuais evita a perda de direitos e garante maior eficácia nas medidas judiciais.</p>
-    <a class="btn-primary" href="https://wa.me/5512982476745?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20an%C3%A1lise%20do%20meu%20caso." target="_blank" rel="noopener">Falar com a equipe no WhatsApp →</a>
+    <h2>Não deixe para resolver seu problema depois</h2>
+    <p>Prazos jurídicos e contratos exigem rapidez. Uma orientação preventiva pode evitar prejuízos maiores e garantir seus direitos a tempo.</p>
+    <a class="btn-primary" href="https://wa.me/5512982476745?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20an%C3%A1lise%20do%20meu%20caso." target="_blank" rel="noopener">Conversar pelo WhatsApp agora →</a>
   </div>
 </section>
 
 <footer>
   Almeida & Vaz Advogados — Sociedade de Advogados.<br>
-  Este site possui caráter meramente informativo e de prestação de serviços, conforme o Código de Ética e Disciplina da OAB.
+  Este site possui caráter meramente informativo, em conformidade com o Código de Ética e Disciplina da OAB.
 </footer>
 
 </body>
