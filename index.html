@@ -33,9 +33,14 @@
       font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.16em;
       text-transform:uppercase; color:var(--gold);
     }
+    .badge-label{
+      font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--gold); 
+      text-transform:uppercase; letter-spacing:0.1em; background:rgba(201,162,75,0.1); 
+      padding:6px 14px; border-radius:4px; border:1px solid var(--line); display:inline-block;
+    }
     h1,h2,h3{font-family:'Cormorant Garamond', serif; margin:0; font-weight:600;}
 
-    /* HEADER & NAV */
+    /* NAV */
     nav{
       display:flex; align-items:center; justify-content:space-between;
       padding:24px 24px; max-width:1040px; margin:0 auto; gap:20px; flex-wrap:wrap;
@@ -43,29 +48,15 @@
     .logo{font-family:'Cormorant Garamond', serif; font-weight:600; font-size:22px; letter-spacing:0.02em; text-decoration:none; color:var(--cream);}
     .logo span{color:var(--gold);}
     
-    .nav-links{
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-    }
-    
+    .nav-links{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
     .nav-links a{
-      color: rgba(237,230,214,0.9);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 500;
-      padding: 8px 14px;
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--line);
-      transition: all 0.25s ease;
-      display: inline-flex;
-      align-items: center;
+      color: rgba(237,230,214,0.9); text-decoration: none; font-size: 13px; font-weight: 500;
+      padding: 8px 14px; border-radius: 6px; background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--line); transition: all 0.25s ease; display: inline-flex; align-items: center;
     }
     .nav-links a:hover{
-      color: var(--gold-bright);
-      border-color: var(--gold);
-      background: rgba(201, 162, 75, 0.12);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      color: var(--gold-bright); border-color: var(--gold); background: rgba(201, 162, 75, 0.12);
+      transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     .nav-cta{
@@ -105,7 +96,13 @@
     .areas{ padding:88px 24px; border-bottom:1px solid var(--line); }
     .areas-head{ max-width:600px; margin-bottom:48px; }
     .areas-head h2{ font-size:clamp(28px,3.4vw,38px); font-weight:500; margin-top:12px; }
-    .areas-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+    
+    .section-divider{
+      display:flex; align-items:center; gap:16px; margin-bottom:24px; flex-wrap:wrap;
+    }
+    .section-divider h3{ font-size:24px; color:var(--cream); font-weight:500; }
+
+    .areas-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; }
     .area-card{
       background:var(--card); border:1px solid var(--line); border-radius:10px; padding:28px 24px;
       transition:border-color 0.2s ease, transform 0.2s ease; text-decoration:none; display:block;
@@ -189,7 +186,7 @@
   <div class="hero-inner">
     <span class="eyebrow">Advocacia Especializada · São Lourenço e Região</span>
     <h1>Defesa jurídica estratégica para <span class="highlight">proteger seus direitos e o seu patrimônio</span>.</h1>
-    <p class="sub">Soluções rápidas e seguras para conflitos bancários, apreensão de veículos, negativas de planos de saúde, ações trabalhistas e benefícios do INSS.</p>
+    <p class="sub">Soluções rápidas e seguras para conflitos bancários, apreensão de veículos, negativas de planos de saúde, ações trabalhistas, INSS e suporte empresarial.</p>
     <div class="hero-cta-row">
       <a class="btn-primary" href="https://wa.me/5512982476745?text=Ol%C3%A1%2C%20gostaria%20de%20apresentar%20meu%20caso%20para%20an%C3%A1lise." target="_blank" rel="noopener">Falar com um advogado no WhatsApp →</a>
     </div>
@@ -216,38 +213,62 @@
       <span class="eyebrow">Áreas de Atuação</span>
       <h2>Como atuamos no seu caso</h2>
     </div>
-    <div class="areas-grid">
-      <a href="busca-e-apreensao.html" class="area-card">
-        <h3>Busca e Apreensão & Bancário</h3>
-        <p>Defesa urgente contra a apreensão do seu veículo, cancelamento de buscas ilegais e renegociação justa de dívidas com bancos.</p>
-        <span class="link-text">Ver detalhes →</span>
-      </a>
-      <a href="saude.html" class="area-card">
-        <h3>Direito à Saúde</h3>
-        <p>Ações rápidas com pedido de liminar para garantir tratamentos, internações, cirurgias e remédios de alto custo imediatamente.</p>
-        <span class="link-text">Ver detalhes →</span>
-      </a>
-      <a href="trabalhista.html" class="area-card">
-        <h3>Direito Trabalhista</h3>
-        <p>Defesa dos seus direitos no trabalho: cálculo correto de verbas rescisórias, horas extras, vínculo empregatício e indenizações.</p>
-        <span class="link-text">Ver detalhes →</span>
-      </a>
-      <a href="beneficio-inss.html" class="area-card">
-        <h3>INSS & Previdência</h3>
-        <p>Auxílio completo para dar entrada, destravar na justiça ou revisar aposentadorias, auxílio-doença, BPC/LOAS e pensões.</p>
-        <span class="link-text">Ver detalhes →</span>
-      </a>
-      <a href="sindicatos.html" class="area-card">
-        <h3>Direito Sindical</h3>
-        <p>Assessoria jurídica especializada para categorias profissionais, negociações de acordos coletivos e suporte institucional.</p>
-        <span class="link-text">Ver detalhes →</span>
-      </a>
-      <a href="condominios.html" class="area-card">
-        <h3>Consumidor & Condomínios</h3>
-        <p>Solução para abusos de empresas de serviços, cobranças indevidas, contratos irregulares e conflitos condominiais.</p>
-        <span class="link-text">Ver detalhes →</span>
-      </a>
+
+    <!-- BLOCO PARA VOCÊ -->
+    <div style="margin-bottom: 56px;">
+      <div class="section-divider">
+        <span class="badge-label">Para Você</span>
+        <h3>Proteção dos seus direitos e do seu patrimônio</h3>
+      </div>
+      <div class="areas-grid">
+        <a href="busca-e-apreensao.html" class="area-card">
+          <h3>Busca e Apreensão & Bancário</h3>
+          <p>Defesa urgente contra a busca do seu veículo, cancelamento de cobranças abusivas e renegociação justa de dívidas bancárias.</p>
+          <span class="link-text">Ver detalhes →</span>
+        </a>
+        <a href="saude.html" class="area-card">
+          <h3>Direito à Saúde</h3>
+          <p>Ações rápidas com pedido de liminar para garantir tratamentos, internações, cirurgias e remédios de alto custo pelo plano ou SUS.</p>
+          <span class="link-text">Ver detalhes →</span>
+        </a>
+        <a href="trabalhista.html" class="area-card">
+          <h3>Direito Trabalhista</h3>
+          <p>Defesa dos seus direitos no trabalho: cálculo correto de verbas rescisórias, horas extras, vínculo empregatício e indenizações.</p>
+          <span class="link-text">Ver detalhes →</span>
+        </a>
+        <a href="beneficio-inss.html" class="area-card">
+          <h3>INSS & Previdência</h3>
+          <p>Auxílio completo para dar entrada, destravar na justiça ou revisar aposentadorias, auxílio-doença, BPC/LOAS e pensões.</p>
+          <span class="link-text">Ver detalhes →</span>
+        </a>
+      </div>
     </div>
+
+    <!-- BLOCO PARA A SUA EMPRESA / INSTITUIÇÃO -->
+    <div>
+      <div class="section-divider">
+        <span class="badge-label" style="color:var(--gold-bright); border-color:rgba(228,200,120,0.3);">Para a sua Empresa / Instituição</span>
+        <h3>Segurança jurídica para o seu negócio</h3>
+      </div>
+      <div class="areas-grid">
+        <a href="sindicatos.html" class="area-card">
+          <h3>Direito Sindical & Institucional</h3>
+          <p>Assessoria jurídica especializada para entidades sindicais, representação em negociações coletivas e demandas institucionais.</p>
+          <span class="link-text">Ver detalhes →</span>
+        </a>
+        <a href="trabalhista.html" class="area-card">
+          <h3>Defesa Trabalhista Empresarial</h3>
+          <p>Consultoria preventiva para evitar passivos trabalhistas, adequação de contratos de trabalho e defesa firme em processos judiciais.</p>
+          <span class="link-text">Ver detalhes →</span>
+        </a>
+        <a href="condominios.html" class="area-card">
+          <h3>Condomínios & Contratos</h3>
+          <p>Suporte jurídico a síndicos e administradoras, cobrança judicial de inadimplentes, revisão de contratos e alteração de convenções.</p>
+          <span class="link-text">Ver detalhes →</span>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
