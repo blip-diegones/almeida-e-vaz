@@ -38,25 +38,43 @@
     /* HEADER & NAV */
     nav{
       display:flex; align-items:center; justify-content:space-between;
-      padding:28px 24px; max-width:1040px; margin:0 auto; gap:20px; flex-wrap:wrap;
+      padding:24px 24px; max-width:1040px; margin:0 auto; gap:20px; flex-wrap:wrap;
     }
     .logo{font-family:'Cormorant Garamond', serif; font-weight:600; font-size:22px; letter-spacing:0.02em; text-decoration:none; color:var(--cream);}
     .logo span{color:var(--gold);}
     
     .nav-links{
-      display:flex; gap:16px; align-items:center; flex-wrap:wrap;
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
     }
+    
+    /* MENU TUNADO: Botões clicáveis com bordas e iluminação */
     .nav-links a{
-      color:rgba(237,230,214,0.8); text-decoration:none; font-size:13.5px; font-weight:500; transition:color 0.2s ease;
+      color: rgba(237,230,214,0.9);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--line);
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
     }
-    .nav-links a:hover{ color:var(--gold-bright); }
+    .nav-links a:hover{
+      color: var(--gold-bright);
+      border-color: var(--gold);
+      background: rgba(201, 162, 75, 0.12);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
 
     .nav-cta{
       font-family:'IBM Plex Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:0.06em;
-      background:transparent; color:var(--cream); border:1px solid var(--line); padding:10px 18px; border-radius:6px; text-decoration:none;
-      display:inline-flex; align-items:center; gap:8px; transition:all 0.2s ease;
+      background:var(--gold); color:var(--bg); border:1px solid var(--gold); padding:10px 18px; border-radius:6px; text-decoration:none;
+      display:inline-flex; align-items:center; gap:8px; font-weight:600; transition:all 0.2s ease;
     }
-    .nav-cta:hover{ border-color:var(--gold); color:var(--gold-bright); }
+    .nav-cta:hover{ background:var(--gold-bright); border-color:var(--gold-bright); transform:translateY(-2px); }
 
     /* HERO */
     .hero{ padding:64px 24px 96px; border-bottom:1px solid var(--line); }
