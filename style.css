@@ -20,7 +20,7 @@ body{
   *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
 }
 a{ color:inherit; }
-.wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+.wrap{max-width:1140px; margin:0 auto; padding:0 24px;}
 .eyebrow{
   font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.16em;
   text-transform:uppercase; color:var(--gold); display:block;
@@ -28,7 +28,7 @@ a{ color:inherit; }
 .badge-label{
   font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--gold);
   text-transform:uppercase; letter-spacing:0.1em; background:rgba(201,162,75,0.1);
-  padding:5px 12px; border-radius:4px; border:1px solid var(--line); display:inline-block;
+  padding:6px 12px; border-radius:4px; border:1px solid var(--line); display:inline-block;
 }
 h1,h2,h3{font-family:'Cormorant Garamond', serif; margin:0; font-weight:600;}
 
@@ -47,7 +47,7 @@ header.nav-header{
 }
 nav{
   display:flex; align-items:center; justify-content:space-between;
-  padding:16px 24px; max-width:1080px; margin:0 auto; gap:20px;
+  padding:16px 24px; max-width:1140px; margin:0 auto; gap:20px;
 }
 .logo{font-family:'Cormorant Garamond', serif; font-weight:600; font-size:22px; letter-spacing:0.02em; text-decoration:none; color:var(--cream); flex-shrink:0;}
 .logo span{color:var(--gold);}
@@ -70,7 +70,7 @@ nav{
 
 /* BREADCRUMB */
 .breadcrumb{
-  max-width: 1080px;
+  max-width: 1140px;
   margin: 32px auto 12px auto;
   padding: 0 24px;
   text-align: left;
@@ -82,7 +82,7 @@ nav{
 .breadcrumb a:hover{ text-decoration: underline; }
 
 /* HERO */
-.hero{ padding:24px 24px 64px; border-bottom:1px solid var(--line); }
+.hero{ padding:32px 24px 64px; border-bottom:1px solid var(--line); }
 .hero-grid{ display:grid; grid-template-columns: 1.15fr 0.85fr; gap:48px; align-items:center; }
 .hero-content h1{ font-size:clamp(32px, 4.2vw, 48px); line-height:1.15; margin:16px 0 20px; font-weight:500; }
 .hero-content h1 .highlight{ font-style:italic; color:var(--gold-bright); }
@@ -100,7 +100,7 @@ nav{
 .hero-photo-caption .names{ font-size:14px; font-weight:600; color:var(--cream); }
 .hero-photo-caption .oab{ font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--gold); margin-top:2px; }
 
-/* Simple hero (no photo, used on subpages) */
+/* HERO PÁGINAS INTERNAS */
 .hero-inner{ max-width:800px; margin:0 auto; text-align:center; }
 .hero-inner h1{ font-size:clamp(32px, 4.6vw, 52px); line-height:1.15; margin:16px 0 22px; font-weight:500; }
 .hero-inner h1 .highlight{ font-style:italic; color:var(--gold-bright); }
@@ -116,14 +116,156 @@ nav{
 .btn-primary:hover{ background:var(--gold-bright); transform:translateY(-2px); box-shadow: 0 6px 20px rgba(201,162,75,0.3); }
 .btn-primary:focus-visible{ outline:3px solid var(--gold-bright); outline-offset:3px; }
 
-/* SOCIAL PROOF BAR (home only) */
+/* PROVA SOCIAL */
 .social-proof{ background:var(--card); border-bottom:1px solid var(--line); padding:24px 24px; }
 .proof-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:center; }
 .proof-item .number{ font-family:'Cormorant Garamond', serif; font-size:24px; font-weight:600; color:var(--gold-bright); }
 .proof-item .label{ font-size:12.5px; color:rgba(237,230,214,0.75); margin-top:2px; }
 
-/* QUALIFY */
-.qualify{ padding:72px 24px; border-bottom:1px solid var(--line); background:var(--bg-soft); }
+/* ==========================================================================
+   SEÇÃO HUB CINEMATOGRÁFICO: QUEM VOCÊ DESEJA PROTEGER HOJE?
+   ========================================================================== */
+.areas {
+  padding: 100px 24px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+}
+
+.areas-head-center {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 60px auto;
+}
+
+.areas-head-center h2 {
+  font-size: clamp(34px, 4.8vw, 56px);
+  font-weight: 500;
+  color: var(--cream);
+  margin: 16px 0 12px 0;
+  letter-spacing: -0.01em;
+}
+
+.areas-head-center p {
+  font-size: 17px;
+  color: rgba(237, 230, 214, 0.75);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* HUB GRID - 2 BANNERS GIGANTES */
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.profile-banner {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  min-height: 480px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.profile-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.profile-banner:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 162, 75, 0.4);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(201, 162, 75, 0.1);
+}
+
+.profile-banner:hover::before {
+  opacity: 1;
+}
+
+.profile-banner .banner-header {
+  margin-bottom: 24px;
+}
+
+.profile-banner h3 {
+  font-size: clamp(26px, 2.5vw, 34px);
+  font-weight: 600;
+  color: var(--cream);
+  margin: 16px 0 12px 0;
+  line-height: 1.2;
+}
+
+.profile-banner p.banner-desc {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: rgba(237, 230, 214, 0.8);
+  margin-bottom: 32px;
+}
+
+.profile-banner ul.banner-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  display: grid;
+  gap: 14px;
+}
+
+.profile-banner ul.banner-list li {
+  font-size: 15px;
+  color: rgba(237, 230, 214, 0.88);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 400;
+}
+
+.profile-banner ul.banner-list li::before {
+  content: "→";
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.profile-banner .banner-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-bright);
+  background: rgba(201, 162, 75, 0.08);
+  border: 1px solid var(--line);
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  margin-top: auto;
+}
+
+.profile-banner:hover .banner-btn {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+  box-shadow: 0 4px 15px rgba(201, 162, 75, 0.3);
+}
+
+/* SOLUÇÕES IMEDIATAS / QUALIFY */
+.qualify{ padding:80px 24px; border-bottom:1px solid var(--line); background:var(--bg-soft); }
 .qualify-inner{ max-width:840px; margin:0 auto; }
 .qualify h2{ font-size:clamp(26px,3.2vw,36px); font-weight:500; margin-top:10px; margin-bottom:28px; }
 .qualify ul{ list-style:none; margin:0; padding:0; display:grid; gap:18px; }
@@ -131,100 +273,8 @@ nav{
   display:grid; grid-template-columns: 20px 1fr; align-items:baseline; font-size:15.5px; line-height:1.6; color:rgba(237,230,214,0.9);
 }
 .qualify li::before{ content:"•"; color:var(--gold); font-size:20px; line-height:1; }
-.qualify .note{ margin-top:28px; font-size:14.5px; color:rgba(237,230,214,0.6); line-height:1.5; }
 
-/* AREAS & SELEÇÃO DE PERFIL */
-.areas{ padding:80px 24px; border-bottom:1px solid var(--line); }
-.areas-head{ max-width:600px; margin-bottom:40px; }
-.areas-head h2{ font-size:clamp(28px,3.4vw,38px); font-weight:500; margin-top:10px; margin-bottom:12px; }
-.areas-head p{ font-size:15.5px; color:rgba(237,230,214,0.8); margin:0; line-height:1.6; }
-
-.section-divider{ display:flex; align-items:center; gap:14px; margin-bottom:20px; flex-wrap:wrap; }
-.section-divider h3{ font-size:22px; color:var(--cream); font-weight:500; }
-
-/* Grid de cards da home (Pessoa Física vs Jurídica / Áreas) */
-.areas-grid, .profiles-grid{ 
-  display:grid; 
-  grid-template-columns:repeat(2, 1fr); 
-  gap:24px; 
-}
-
-.area-card, .profile-card{
-  background:var(--card); 
-  border:1px solid var(--line); 
-  border-radius:12px; 
-  padding:32px 28px;
-  transition:all 0.25s ease; 
-  text-decoration:none; 
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-.area-card:hover, .profile-card:hover{ 
-  border-color:var(--gold); 
-  transform:translateY(-4px); 
-  box-shadow: 0 12px 32px rgba(0,0,0,0.45); 
-}
-
-.profile-card h3, .area-card h3{ 
-  font-size:22px; 
-  font-weight:600; 
-  color:var(--gold-bright); 
-  margin-top:8px;
-  margin-bottom:6px; 
-}
-.profile-card h4{
-  font-size:16px;
-  font-weight:500;
-  color:var(--cream);
-  margin-top:0;
-  margin-bottom:14px;
-}
-.profile-card p, .area-card p{ 
-  font-size:14.5px; 
-  line-height:1.6; 
-  color:rgba(237,230,214,0.82); 
-  margin-bottom:20px; 
-}
-
-.profile-card ul, .area-card ul{
-  list-style:none;
-  padding:0;
-  margin:0 0 28px 0;
-  display:grid;
-  gap:10px;
-}
-.profile-card li, .area-card li{
-  font-size:14px;
-  line-height:1.5;
-  color:rgba(237,230,214,0.75);
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.profile-card li::before, .area-card li::before{
-  content:"✓";
-  color:var(--gold);
-  font-weight:bold;
-  font-size:13px;
-}
-
-.profile-card a, .area-card .link-text{ 
-  font-family:'IBM Plex Mono', monospace; 
-  font-size:12px; 
-  color:var(--gold); 
-  text-decoration:none;
-  font-weight:600;
-  text-transform:uppercase;
-  letter-spacing:0.04em;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  margin-top:auto;
-}
-.profile-card a:hover{ color:var(--gold-bright); text-decoration:underline; }
-
-/* TEAM (subpages) */
+/* EQUIPE (páginas internas / sobre) */
 .team{ padding:80px 24px; border-bottom:1px solid var(--line); background:var(--bg-soft); }
 .team-inner{ max-width:900px; margin:0 auto; display:grid; grid-template-columns: 0.85fr 1.15fr; gap:48px; align-items:center; }
 .team-photo{ width:100%; border-radius:12px; display:block; border:1px solid var(--line); }
@@ -232,26 +282,13 @@ nav{
 .lawyer{ margin-bottom:16px; }
 .lawyer .name{ font-size:19px; color:var(--cream); font-weight:600; font-family:'Work Sans', sans-serif; }
 .lawyer .oab{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--gold); letter-spacing:0.04em; margin-top:2px; }
-.team-head p.desc{ font-size:15px; line-height:1.6; color:rgba(237,230,214,0.75); margin-top:18px; }
-.team-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:900px; margin:0 auto; }
-.member-card{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:26px; }
-.member-card .name{ font-size:20px; font-weight:600; color:var(--cream); }
-.member-card .role{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--gold); text-transform:uppercase; letter-spacing:0.06em; margin-top:4px; }
-.member-card .oab{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:rgba(237,230,214,0.6); margin-top:6px; }
-.member-card p.bio{ font-size:14.5px; line-height:1.6; color:rgba(237,230,214,0.78); margin-top:14px; }
-.btn-secondary{
-  font-family:'IBM Plex Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:0.06em;
-  border:1px solid var(--line); color:var(--cream); padding:10px 16px; border-radius:6px; text-decoration:none;
-  display:inline-flex; align-items:center; gap:8px; transition:all 0.2s ease;
-}
-.btn-secondary:hover{ border-color:var(--gold); color:var(--gold-bright); }
 
-/* HOW IT WORKS */
+/* PASSO A PASSO / HOW */
 .how{ padding:80px 24px; border-bottom:1px solid var(--line); background:var(--bg-soft); }
 .how-inner{ max-width:880px; margin:0 auto; }
 .how h2{ font-size:clamp(28px,3.4vw,38px); font-weight:500; margin-top:10px; margin-bottom:40px; }
 .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-.step{ background:var(--card); padding:24px; border-radius:8px; border:1px solid var(--line); }
+.step{ background:var(--card); padding:28px; border-radius:12px; border:1px solid var(--line); }
 .step .step-label{ font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--gold); letter-spacing:0.12em; text-transform:uppercase; }
 .step h3{ font-size:19px; font-weight:600; margin:10px 0 8px; color:var(--cream); }
 .step p{ font-size:14px; line-height:1.55; color:rgba(237,230,214,0.78); margin:0; }
@@ -276,6 +313,7 @@ details p{ font-size:14.5px; line-height:1.6; color:rgba(237,230,214,0.8); margi
 .cta-band h2{ font-size:clamp(28px,3.6vw,38px); font-weight:500; }
 .cta-band p{ font-size:15.5px; line-height:1.6; margin:14px 0 28px; color:rgba(237,230,214,0.82); }
 
+/* FOOTER */
 footer{
   padding:40px 24px 48px; text-align:center;
   font-family:'IBM Plex Mono', monospace; font-size:11px; color:rgba(237,230,214,0.45); line-height:1.7;
@@ -284,36 +322,25 @@ footer .foot-links{ margin-bottom:14px; }
 footer .foot-links a{ color:rgba(237,230,214,0.6); text-decoration:none; margin:0 8px; }
 footer .foot-links a:hover{ color:var(--gold-bright); }
 
+/* RESPONSIVIDADE (CELULARES E TABLETS) */
 @media (max-width: 860px){
   .hero-grid{ grid-template-columns:1fr; }
   .proof-grid{ grid-template-columns:repeat(2,1fr); gap:16px; }
   .nav-links{ display:none; }
-  .areas-grid, .profiles-grid{ grid-template-columns:1fr; }
+  .hub-grid{ grid-template-columns:1fr; }
+  .profile-banner{ min-height:auto; padding:32px 24px; }
   .steps{ grid-template-columns:1fr; }
   .team-inner{ grid-template-columns:1fr; }
   .team-photo{ max-width:340px; margin:0 auto; }
-  .team-grid{ grid-template-columns:1fr; }
   .breadcrumb{ margin-top: 24px; }
 }
 
-/* ==========================================================================
-   EFEITO SCROLL REVEAL (visível por padrão)
-   ========================================================================== */
-
-.reveal {
-  opacity: 1;
-  transform: none;
-}
-
+/* SCROLL REVEAL */
+.reveal { opacity: 1; transform: none; }
 html.js .reveal {
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
-
-html.js .reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+html.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
