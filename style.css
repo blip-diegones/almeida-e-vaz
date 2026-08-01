@@ -38,6 +38,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  width: 100%;
 }
 
 .eyebrow {
@@ -161,7 +162,7 @@ p {
   color: var(--navy-dark);
 }
 
-/* HERO */
+/* HERO PRINCIPAL */
 .hero {
   padding: 80px 0;
   background: radial-gradient(circle at 80% 20%, rgba(203, 163, 88, 0.08) 0%, transparent 50%);
@@ -528,9 +529,50 @@ footer {
   color: var(--gold-primary);
 }
 
+/* ===================================================
+   ESTILOS ESPECÍFICOS PARA ESTRUTURA DE SUBPÁGINAS
+   =================================================== */
+
+/* Container de Conteúdo Interno das Subpáginas */
+section.page-content, 
+.page-section,
+main.page-main {
+  padding: 60px 0;
+}
+
+/* Garante alinhamento dos containers internos das subpáginas */
+.page-content .wrap,
+.page-main .wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Alinhamento de Grids Internos de Serviços e Benefícios */
+.grid-2-col, .two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.grid-3-col, .three-col-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Ajustes para listas e cards dentro de subpáginas */
+.content-box, .subpage-card {
+  background: var(--navy-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 32px;
+}
+
 /* RESPONSIVIDADE (CELULAR E TABLET) */
 @media (max-width: 992px) {
-  .hero-grid, .hub-grid, .steps {
+  .hero-grid, .hub-grid, .steps, .grid-2-col, .grid-3-col, .two-col-grid, .three-col-grid {
     grid-template-columns: 1fr;
   }
   .proof-grid {
