@@ -155,7 +155,7 @@ nav{
   line-height: 1.6;
 }
 
-/* HUB GRID (2 BANNERS) */
+/* HUB GRID (2 BANNERS GIGANTES) */
 .hub-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -221,7 +221,7 @@ nav{
   border-color: var(--gold); box-shadow: 0 4px 15px rgba(201, 162, 75, 0.3);
 }
 
-/* DETAILED CARDS GRID */
+/* CARDS DETALHADOS DAS ÁREAS */
 .section-divider{ display:flex; align-items:center; gap:14px; margin-bottom:20px; flex-wrap:wrap; }
 .section-divider h3{ font-size:22px; color:var(--cream); font-weight:500; }
 .areas-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:18px; }
@@ -230,6 +230,7 @@ nav{
   transition:all 0.25s ease; text-decoration:none; display:block;
 }
 .area-card:hover{ border-color:var(--gold); transform:translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.area-card .card-emoji { font-size: 22px; display: block; margin-bottom: 10px; line-height: 1; }
 .area-card h3{ font-size:20px; font-weight:600; color:var(--gold-bright); margin-bottom:8px; }
 .area-card p{ font-size:14px; line-height:1.55; color:rgba(237,230,214,0.78); margin:0; }
 .area-card .link-text{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--gold); margin-top:14px; display:inline-block; }
